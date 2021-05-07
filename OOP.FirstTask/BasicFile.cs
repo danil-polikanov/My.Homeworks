@@ -12,7 +12,5 @@ namespace OOP.FirstTask
         public Size size { get; set; }
         public string extension { get; set; }
 
-        public string type { get; set; }
-
     }
 }

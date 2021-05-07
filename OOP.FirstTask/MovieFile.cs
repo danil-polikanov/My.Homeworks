@@ -8,15 +8,14 @@ namespace OOP.FirstTask
 {
     class MovieFile: BasicFile
     {
-       public string resolution { get; set; }
+       public Resolution resolution { get; set; }
        public string length { get; set;}
 
         public MovieFile(string extension, string size, string resolution, string name, string length)
         {
-            this.type = "Movies";
             this.extension = extension;
             this.size = new Size(size);
-            this.resolution = resolution;
+            this.resolution = new Resolution(resolution);
             this.name = name;
             this.length = length;
         }

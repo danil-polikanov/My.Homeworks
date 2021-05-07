@@ -32,9 +32,10 @@ namespace OOP.FirstTask
             string type = "";
             foreach(var file in FileList)
             {
-                if (type != file.type)
+                string result = file.GetType().ToString().Split('.').LastOrDefault();
+                if (type != result)
                 {
-                    type = file.type;
+                    type = result;
                     Console.WriteLine($"{type}:");
                 }
                 Console.WriteLine(file.ToString());

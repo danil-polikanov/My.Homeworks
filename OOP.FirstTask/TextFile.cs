@@ -12,7 +12,6 @@ namespace OOP.FirstTask
 
         public TextFile(string extension, string size,string content,string name)
         {
-            this.type = "Text files";
             this.extension = extension;
             this.size =new Size(size);
             this.content = content;

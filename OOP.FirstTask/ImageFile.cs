@@ -12,7 +12,6 @@ namespace OOP.FirstTask
 
         public ImageFile(string extension, string size, string resolution, string name)
         {
-            this.type="Images";
             this.extension = extension;
             this.size = new Size(size);
             this.resolution = new Resolution(resolution);
