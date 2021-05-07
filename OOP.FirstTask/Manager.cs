@@ -12,14 +12,16 @@ namespace OOP.FirstTask
         public List<BasicFile> FileList;
         public Dictionary<string, IParser> Parsers;
 
+
         public Manager(string ParsingText)
         {
             this.text = ParsingText;
             FileList = new List<BasicFile>();
             Parsers = new Dictionary<string, IParser>();
-            Parsers.Add("Text", new TextParse());
-            Parsers.Add("Image", new ImageParse());
-            Parsers.Add("Movie", new MovieParse());
+        }
+        public void AddParser(string type,IParser name)
+        {
+            Parsers.Add(type, name);
         }
         void ParseString(string text)
         {
