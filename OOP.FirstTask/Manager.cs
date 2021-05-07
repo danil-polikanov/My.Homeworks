@@ -23,12 +23,7 @@ namespace OOP.FirstTask
         {
             Parsers.Add(type, name);
         }
-        void ParseString(string text)
-        {
 
-            string[] type = text.Split(':');
-            FileList.Add(Parsers[type[0].Trim()].Parse(type[1]));
-        }
         public void WriteConsole()
         {
             string type = "";
@@ -48,7 +43,9 @@ namespace OOP.FirstTask
             string[] files = text.Split('\n');
             foreach(string file in files)
             {
-                ParseString(file);
+                string[] type = file.Split(':');
+                FileList.Add(Parsers[type[0].Trim()].Parse(type[1]));
+              
             }
         }
         public void Sort()
