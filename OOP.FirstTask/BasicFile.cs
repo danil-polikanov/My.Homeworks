@@ -8,11 +8,11 @@ namespace OOP.FirstTask
 {
    public abstract class BasicFile
     {
-        public string Name { get; set; }
-        public Size Size { get; set; }
-        public string Extension { get; set; }
+        public string name { get; set; }
+        public Size size { get; set; }
+        public string extension { get; set; }
 
-        public string Type { get; set; }
+        public string type { get; set; }
 
     }
 }

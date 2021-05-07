@@ -32,9 +32,9 @@ namespace OOP.FirstTask
             string type = "";
             foreach(var file in FileList)
             {
-                if (type != file.Type)
+                if (type != file.type)
                 {
-                    type = file.Type;
+                    type = file.type;
                     Console.WriteLine($"{type}:");
                 }
                 Console.WriteLine(file.ToString());
@@ -51,9 +51,9 @@ namespace OOP.FirstTask
         public void Sort()
         {
             var res = (from item in FileList
-                       orderby item.Size
+                       orderby item.size
                        group item
-                       by item.Name).ToList();
+                       by item.name).ToList();
             var newList = new List<BasicFile>();
             foreach(var group in res)
             {

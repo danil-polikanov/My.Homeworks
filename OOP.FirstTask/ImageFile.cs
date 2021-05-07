@@ -8,23 +8,23 @@ namespace OOP.FirstTask
 {
     public class ImageFile : BasicFile
     {
-        public Resolution Resolution { get; set; }
+        public Resolution resolution { get; set; }
 
-        public ImageFile(string Extension, string Size, string Resolution, string Name)
+        public ImageFile(string extension, string size, string resolution, string name)
         {
-            this.Type="Images";
-            this.Extension = Extension;
-            this.Size = new Size(Size);
-            this.Resolution = new Resolution(Resolution);
-            this.Name = Name;
+            this.type="Images";
+            this.extension = extension;
+            this.size = new Size(size);
+            this.resolution = new Resolution(resolution);
+            this.name = name;
         }
         public override string ToString()
         {
             StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append($"\t{Name}\r\n");
-            stringBuilder.Append($"\t\tExtension:{Extension}\r\n");
-            stringBuilder.Append($"\t\tSize:{Size}\r\n");
-            stringBuilder.Append($"\t\tResolution:{Resolution}\r\n");
+            stringBuilder.Append($"\t{name}\r\n");
+            stringBuilder.Append($"\t\tExtension:{extension}\r\n");
+            stringBuilder.Append($"\t\tSize:{size}\r\n");
+            stringBuilder.Append($"\t\tResolution:{resolution}\r\n");
             return stringBuilder.ToString();
 
         }

@@ -8,26 +8,26 @@ namespace OOP.FirstTask
 {
     class MovieFile: BasicFile
     {
-       public string Resolution { get; set; }
-       public string Length { get; set;}
+       public string resolution { get; set; }
+       public string length { get; set;}
 
-        public MovieFile(string Extension, string Size, string Resolution, string Name, string Length)
+        public MovieFile(string extension, string size, string resolution, string name, string length)
         {
-            this.Type = "Movies";
-            this.Extension = Extension;
-            this.Size = new Size(Size);
-            this.Resolution = Resolution;
-            this.Name = Name;
-            this.Length = Length;
+            this.type = "Movies";
+            this.extension = extension;
+            this.size = new Size(size);
+            this.resolution = resolution;
+            this.name = name;
+            this.length = length;
         }
         public override string ToString()
         {
             StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append($"\t{Name}\r\n");
-            stringBuilder.Append($"\t\tExtension:{Extension}\r\n");
-            stringBuilder.Append($"\t\tSize:{Size}\r\n");
-            stringBuilder.Append($"\t\tResolution:{Resolution}\r\n");
-            stringBuilder.Append($"\t\tLength:{Length}\r\n");
+            stringBuilder.Append($"\t{name}\r\n");
+            stringBuilder.Append($"\t\tExtension:{extension}\r\n");
+            stringBuilder.Append($"\t\tSize:{size}\r\n");
+            stringBuilder.Append($"\t\tResolution:{resolution}\r\n");
+            stringBuilder.Append($"\t\tLength:{length}\r\n");
             return stringBuilder.ToString();
 
         }
