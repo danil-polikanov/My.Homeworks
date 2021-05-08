@@ -9,9 +9,9 @@ namespace OOP.FirstTask
     class MovieFile: BasicFile
     {
        public Resolution resolution { get; set; }
-       public string length { get; set;}
+       public DateTime length { get; set;}
 
-        public MovieFile(string extension, string size, string resolution, string name, string length)
+        public MovieFile(string extension, string size, string resolution, string name, DateTime length)
         {
             this.extension = extension;
             this.size = new Size(size);
@@ -26,7 +26,7 @@ namespace OOP.FirstTask
             stringBuilder.Append($"\t\tExtension:{extension}\r\n");
             stringBuilder.Append($"\t\tSize:{size}\r\n");
             stringBuilder.Append($"\t\tResolution:{resolution}\r\n");
-            stringBuilder.Append($"\t\tLength:{length}\r\n");
+            stringBuilder.Append($"\t\tLength:{length.Hour}h{length.Minute}m\r\n");
             return stringBuilder.ToString();
 
         }
