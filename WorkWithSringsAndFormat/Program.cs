@@ -24,8 +24,6 @@ namespace WorkWithSringsAndFormat
 
             ExponentialForm1(value);
 
-
-
             //4
             DateTimeIso();
 
