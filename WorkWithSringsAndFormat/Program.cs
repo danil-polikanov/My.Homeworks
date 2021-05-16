@@ -3,11 +3,14 @@ using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 
+
+
 namespace WorkWithSringsAndFormat
 {
     class Program
     {
         static void Main(string[] args)
+
         {   //1]
             Console.WriteLine("Введите строку где есть цифры");
             string text =Console.ReadLine();
@@ -19,7 +22,7 @@ namespace WorkWithSringsAndFormat
             DivisionOfNumbers(firstNum, secondNum);
 
             //3
-
+            Console.WriteLine("Значение в экспоненциальной форме");
             string value = (Console.ReadLine());
 
             ExponentialForm1(value);
@@ -29,16 +32,20 @@ namespace WorkWithSringsAndFormat
 
             string Date = "2016 21-07";
             string[] FirstDate = Date.Split('-', ' ');
+
             FirstDate[0] = FirstDate[0] + '.';
             FirstDate[1] = FirstDate[1];
             FirstDate[2] = FirstDate[2].Remove(0, 0) + '.';
 
+
             Date = (FirstDate[0] + FirstDate[2] + FirstDate[1]).ToString();
             //5
+            
             DateTime date = new DateTime();
             date = DateTime.Parse(Date);
 
             Console.WriteLine(date);
+
 
             //6
             Console.WriteLine("Введите числа через запятую");
@@ -247,3 +254,4 @@ namespace WorkWithSringsAndFormat
         }
     }
 }
+
