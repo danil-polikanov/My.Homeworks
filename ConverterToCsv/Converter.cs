@@ -24,6 +24,7 @@ namespace ConverterToCsv
             Type myType = typeof(Person);
             var separated = properties.Split(',');
 
+        
             foreach (var property in separated)
             {
                 propertiesList.Add(property.Trim());
@@ -34,57 +35,28 @@ namespace ConverterToCsv
 
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append("sep=,\n");
-            //var filted = personList.(x => myPropertyInfo.GetValue(x, null));
-            foreach (var i in propertiesList)
-            {
-                if (propertiesList.LastIndexOf(i) != propertiesList.Count - 1)
-                {
-                    stringBuilder.Append(i + ',');
-                }
+            stringBuilder.AppendJoin(',', propertiesList);
 
-                else
-                {
-                    stringBuilder.Append(i);
-
-                    //if (propertiesList.LastIndexOf(i) == propertiesList.Count - 1)
-                    //{
-                    //    stringBuilder.Append("\n");
-                    //}
-                }
-
-
-            }
-
-            foreach (var u in personList)
+            foreach (var person in personList)
             {
                 stringBuilder.Append("\n");
-                foreach (var z in propertiesList)
+                foreach (var propety in propertiesList)
                 {
 
-                    myPropertyInfo = myType.GetProperty(z);
-                    if (myPropertyInfo.GetValue(u) != null)
+                    myPropertyInfo = myType.GetProperty(propety);
+                    if (myPropertyInfo.GetValue(person) != null)
                     {
-                        if (myPropertyInfo.GetValue(u).ToString().Contains(','))
+                        if (myPropertyInfo.GetValue(person).ToString().Contains(','))
                         {
 
-                            stringBuilder.Append($"\"{myPropertyInfo.GetValue(u)}\"");
+                            stringBuilder.Append($"\"{myPropertyInfo.GetValue(person)}\"");
 
                         }
-                        else { stringBuilder.Append(myPropertyInfo.GetValue(u, null)); }
+                        else { stringBuilder.Append(myPropertyInfo.GetValue(person, null)); }
                     }
-                    //stringBuilder.Append(',');
-
-                    else { stringBuilder.Append(myPropertyInfo.GetValue(u, null)); }
-                    //if (personList.LastIndexOf(u) != personList.Count - 1)
-                    //{
-                    //    stringBuilder.Append(',');
-                    //}
+                    else { stringBuilder.Append(myPropertyInfo.GetValue(person, null)); }
+                  
                     stringBuilder.Append(',');
-                    //else
-                    //{
-                    //    stringBuilder.Append("\n");
-                    //}
-
                 }
 
             }
