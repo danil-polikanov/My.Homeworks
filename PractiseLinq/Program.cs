@@ -33,7 +33,7 @@ namespace PractiseLinq
             new Customer(20, "Anna Ledesma", new DateTime(2017, 12, 29), 0.8)
             };
 
-          
+
             //1
             var firstDatedPerson = customers.OrderBy(x => x.RegistrationDate).FirstOrDefault();
             Console.WriteLine("Первое задание;");
@@ -53,9 +53,9 @@ namespace PractiseLinq
             //7
             Console.WriteLine("Введите по какому полю сортировать");
             string property = Console.ReadLine();
-            Console.WriteLine("Введите направление текстом:\"ascending\" or \"descending\"");
-            string choice = Console.ReadLine();
-            FilterByType(customers, property, choice);
+            Console.WriteLine("Введите направление текстом:\"ascending\"=1 or \"descending\"=0");
+            bool OrderByDirection = bool.Parse(Console.ReadLine());
+            FilterByType(customers, property, OrderByDirection);
             //8
             GetNames(customers);
 
@@ -85,7 +85,7 @@ namespace PractiseLinq
                 {
                     Console.WriteLine($"Id:{s.Id}Name:{s.Name};RegistrationDate:{s.RegistrationDate}");
                 }
-        
+
         }
         static void FilterById(List<Customer> customers, long start, long end)
         {
@@ -118,16 +118,16 @@ namespace PractiseLinq
             OrderBy(x => x.RegistrationDate.Month).ThenBy(x => x.Name).
             GroupBy(x => x.RegistrationDate.Month);
 
-            foreach (IGrouping<int, Customer> g in filtByMonth)
+            foreach (IGrouping<int, Customer> RegistrationMonth in filtByMonth)
             {
-                Console.WriteLine($"Registration month:{g.Key}\n");
-                foreach (var t in g)
+                Console.WriteLine($"Registration month:{RegistrationMonth.Key}\n");
+                foreach (var t in RegistrationMonth)
                 {
                     Console.WriteLine($"Name:{t.Name}");
                 }
             }
         }
-        static void FilterByType(List<Customer> customers, string property, string choice)
+        static void FilterByType(List<Customer> customers, string property, bool OrderByDirection)
         {
             Console.WriteLine("Седьмое задание:");
             Console.WriteLine("Фильтр потребителей по заданому имени и полю");
@@ -135,28 +135,11 @@ namespace PractiseLinq
 
             PropertyInfo myPropertyInfo;
             myPropertyInfo = myType.GetProperty(property);
-            switch (choice)
-            {
-                case "ascending":
-                    var filtedByAscending
-          = customers.OrderBy
-          (x => myPropertyInfo
-          .GetValue(x, null));
+            var filtedByDirection = customers;
+            filtedByDirection = OrderByDirection ? customers.OrderBy(x => myPropertyInfo.GetValue(x, null)).ToList() : customers.OrderByDescending(x => myPropertyInfo.GetValue(x, null)).ToList();
+            foreach (var customer in filtedByDirection)
+                Console.WriteLine($"Name:{customer.Name}");
 
-                    foreach (var u in filtedByAscending)
-                        Console.WriteLine($"Name:{u.Name}");
-                    ; break;
-
-                case "descending":
-                    var filtedByDescending
-                        = customers.OrderByDescending
-                        (x => myPropertyInfo
-                        .GetValue(x, null));
-
-                    foreach (var u in filtedByDescending)
-                        Console.WriteLine($"Name:{u.Name}");
-                    ; break;
-            }
         }
 
         static void GetNames(List<Customer> customers)
@@ -165,6 +148,7 @@ namespace PractiseLinq
             Console.WriteLine("Фильтр имена всех потребителей");
             Console.WriteLine(string.Join(", ", customers.Select(x => x.Name)));
         }
+
 
     }
 }

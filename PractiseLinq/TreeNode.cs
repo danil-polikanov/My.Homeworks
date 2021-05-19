@@ -18,18 +18,6 @@ namespace PractiseLinq
             this.Data = data;
             this.Child = new List<TreeNode<T>>();
         }
-
-        //public IEnumerable<TreeNode<T>> DepthFirstTraversal(List<T> tree)
-        //{
-        //    return (x=>)
-        //    // your code here
-
-        //}
-
-        //public IEnumerable<TreeNode<T>> BreadthFirstTraversal()
-        //{
-        //    // your code here
-        //}
     }
 
 
