@@ -7,142 +7,85 @@ namespace Linq_Collections
     {
         static void Main(string[] args)
         {
-            ////1
-            //Numbers();
-            ////2
-            //NumbersByThree();
-            ////3
-            //ShowLinqTen();
-            //4
-            //5
-            //WordWithA();
-            //6
-            //TrueOrFalse();
-            //7
-            //LongWord();
-            //8
-            //AverageLength();
-            //9
-            //ShortReverse();
-            //CheckWordForBB();
+            Console.WriteLine("1. Выведите все числа от 10 до 50 через запятую.");
+            Numbers();
+            Console.WriteLine("2. Выведите только те числа от 10 до 50, которые можно разделить на 3.");
+            NumbersByThree();
+            Console.WriteLine("3. Выведите слово «Linq» 10 раз.");
+            ShowLinqTen();
+            Console.WriteLine("4. Вывести все слова с буквой «а» в строку «aaa; abb; ccc; dap».");
+            WordWithA();
+            Console.WriteLine("5. Выведите количество букв «а» в словах с этой буквой в строке «aaa; abb; ccc; dap» через запятую.");
+            CountWordWithA();
+            Console.WriteLine("6. Выведите true, если слово «abb» существует в строке «aaa; xabbx; abb; ccc; dap», в противном случае - false.");
+            TrueOrFalse();
+            Console.WriteLine("7. Найдите самое длинное слово в строке «aaa; xabbx; abb; ccc; dap».");
+            LongWord();
+            Console.WriteLine("8. Вычислить среднюю длину слова в строке «aaa; xabbx; abb; ccc; dap».");
+            AverageLength();
+            Console.WriteLine("9. Выведите самое короткое слово в перевернутом виде в строке «aaa; xabbx; abb; ccc; dap; zh»..");
+            ShortReverse();
+            Console.WriteLine("10. Выведите true, если в первом слове, начинающемся с «aa», все буквы - «b», в противном случае - false «baaa; aabb; aaa; xabbx; abb; ccc; dap; zh».");
+            CheckWordForBB();
+            Console.WriteLine("11.Выведите последнее слово в последовательности, за исключением первых двух элементов, заканчивающихся на «bb».");
             LastWordEndWithBB();
         }
 
         static void Numbers()
-        { 
-            int[] array = Enumerable.Range(10, 41).ToArray();
-            Console.WriteLine($"Числа: {string.Join(",", array)}");
+        {
+            Console.WriteLine($"Числа: {string.Join(",", Enumerable.Range(10, 41))}");
         }
         static void NumbersByThree()
         {
-            int[] array = Enumerable.Range(10,41).Where(x=>x%3==0).ToArray();
-            Console.WriteLine($"Числа: {string.Join(",", array)}");
+            Console.WriteLine($"Числа: {string.Join(",", Enumerable.Range(10, 41).Where(x => x % 3 == 0))}");
         }
         static void ShowLinqTen()
         {
-            foreach (string s in Enumerable.Repeat("Linq", 10).Select((x, i) => $"{i + 1}:{x}"))
-            {
-                Console.WriteLine(s);
-            }
+            Console.WriteLine(string.Concat(Enumerable.Repeat("Linq", 10)));
         }
         static void WordWithA()
         {
-            Console.WriteLine("Введите слова");
-            string text=Console.ReadLine();
-            string[] separeted = text.Split("; ");
-            var result = from i in separeted where i.Contains("a") select i;
-            string final = null;
-            byte tnp = 1;
-            foreach (var item in result)
-            {
-                final = string.Join(",", item).ToString();
-                Console.WriteLine($"Слово с а номер {tnp}: {final}");
-                tnp++;
-            }
-
-            foreach (var item in result)
-            {
-                char[] letters = item.ToCharArray();
-                var letter = letters.Where(a => a == 'a');
-                string.Join(",", letter);
-                Console.Write($"{letter.Count()}");
-                
-                
-            }  
+            string text = "aaa; abb; ccc; dap";
+            Console.WriteLine(String.Join(',', text.Split("; ").Where(x => x.Contains('a'))));
         }
-        static void TrueOrFalse() {
-            Console.WriteLine("Введите слова");
-            string text = Console.ReadLine();
-            string[] separeted = text.Split("; ");
-            foreach (var item in separeted)
-            {
-                Console.WriteLine($"{item.Contains("abb")}");
-            }
+        static void CountWordWithA()
+        {
+            string text = "aaa; abb; ccc; dap";
+            char a = 'a';
+            Console.WriteLine(String.Join(',', text.Split("; ").Where(x => x.Contains('a')).Select(x => x.Count('a'.Equals))));
         }
-
+        static void TrueOrFalse()
+        {
+            string text = "aaa; xabbx; abb; ccc; dap";
+            Console.WriteLine($"{text.Split("; ").Contains("abb")}");
+        }
         static void LongWord()
         {
-            Console.WriteLine("Введите слова");
-            string text = Console.ReadLine();
-            string[] separeted = text.Split("; ");
-            string wordWithMaxLenght = string.Empty;
-            foreach (var item in separeted)
-            {
-                if (item.Length > wordWithMaxLenght.Length)
-                {
-                    wordWithMaxLenght = item;
-                }
-
-            }
-            Console.WriteLine($"{wordWithMaxLenght}");
-
+            string text = "aaa; xabbx; abb; ccc; dap");
+            Console.WriteLine(text.Split("; ").Where(x => x.Length == text.Split("; ").Max(x => x.Length)).FirstOrDefault());
         }
         static void AverageLength()
         {
-            Console.WriteLine("Введите слова");
-            string text = Console.ReadLine();
-            string[] separeted = text.Split("; ");
-            double res = 0;
-            foreach (var item in separeted)
-            {
-                res =res+item.Count();
-            }
-            Console.WriteLine($"{res/separeted.Count()}");
-
+            string text = "aaa; xabbx; abb; ccc; dap";
+            Console.WriteLine(text.Split("; ").Average(x => x.Length));
         }
         static void ShortReverse()
         {
-            Console.WriteLine("Введите слова");
-            string text = Console.ReadLine();
-            string[] separeted = text.Split("; ");
-            string wordWithShortLenght = text;
-            foreach (var item in separeted)
-            {
-                if (item.Length < wordWithShortLenght.Length)
-                {
-                    wordWithShortLenght = item;
-                    wordWithShortLenght.Reverse().ToArray();
-                }
-
-            }
-            Console.WriteLine($"{wordWithShortLenght}");
+            string text = "aaa; xabbx; abb; ccc; dap; zh";
+            Console.WriteLine(new String(text.Split("; ").
+                Where(x => x.Length == text.Split("; ").Min(x => x.Length)).FirstOrDefault().Reverse().ToArray()));
         }
-        static void checkWordForBB()
+        static void CheckWordForBB()
         {
-            Console.WriteLine("Введите слова");
-            string text = Console.ReadLine();
+            string text = "baaa; aabb; aaa; xabbx; abb; ccc; dap; zh";
             string[] separeted = text.Split("; ");
-
-                Console.WriteLine(text.Split("; ").First(y => y.StartsWith("aa")).Skip(2).All(y => y == 'b'));
-            
+            Console.WriteLine(text.Split("; ").First(y => y.StartsWith("aa")).Skip(2).All(y => y == 'b'));
         }
         static void LastWordEndWithBB()
         {
-            Console.WriteLine("Введите слова");
-            string text = Console.ReadLine();
-
+            string text = "baaa; aabb; aaa; xabbx; abb; ccc; dap; zh";
             Console.WriteLine(text.Split("; ").Where(x => x.EndsWith("bb")).Take(2).LastOrDefault());
         }
     }
-   
+
 }
