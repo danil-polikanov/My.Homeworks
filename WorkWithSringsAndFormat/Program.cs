@@ -11,84 +11,76 @@ namespace WorkWithSringsAndFormat
     {
         static void Main(string[] args)
 
-        {   //1]
+        {
+            Console.WriteLine("1)   Написать метод, который принимает строку и печатает на экран все ее символы, которые являются цифрой.");
             Console.WriteLine("Введите строку где есть цифры");
-            string text =Console.ReadLine();
-            ReturnNumber(text);
+            string numbersFromString = Console.ReadLine();
+            ReturnNumber(numbersFromString);
 
-            ////2
-            double firstNum = 70;
-            double secondNum = 35.65;
-            DivisionOfNumbers(firstNum, secondNum);
+            Console.WriteLine("2)	Преобразовать результат деления двух чисел в число с 2-мя знаками после запятой");
+            Console.WriteLine("Введите первое число");
+            double firstNumberDivide = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите второе число");
+            double secondNumberDivide = double.Parse(Console.ReadLine());
+            DivisionOfNumbers(firstNumberDivide, secondNumberDivide);
 
-            //3
-            Console.WriteLine("Значение в экспоненциальной форме");
-            string value = (Console.ReadLine());
+            Console.WriteLine("3)   Прочитать целое число с консоли. Разрешить ввод в экспоненциальной форме.");
+            Console.WriteLine("Введите Значение в экспоненциальной форме");
+            string exponentialValue = (Console.ReadLine());
+            ExponentialForm1(exponentialValue);
 
-            ExponentialForm1(value);
-
-            //4
+            Console.WriteLine("4)	Представить текущую дату и время в формате ISO-8601 ");
             DateTimeIso();
 
-            string Date = "2016 21-07";
-            string[] FirstDate = Date.Split('-', ' ');
+            Console.WriteLine("5)	Дана строка с датой: “2016 21-07”. Распарсить в DateTime ");
+            string notParsedDatedate = "2016 21-07";
+            Console.WriteLine(ParseDateTime(notParsedDatedate));
 
-            FirstDate[0] = FirstDate[0] + '.';
-            FirstDate[1] = FirstDate[1];
-            FirstDate[2] = FirstDate[2].Remove(0, 0) + '.';
-
-
-            Date = (FirstDate[0] + FirstDate[2] + FirstDate[1]).ToString();
-            //5
-            
-            DateTime date = new DateTime();
-            date = DateTime.Parse(Date);
-
-            Console.WriteLine(date);
-
-
-            //6
+            Console.WriteLine("6)   Написать метод, который принимает строку и печатает на экран все ее символы, которые являются цифрой.");
             Console.WriteLine("Введите числа через запятую");
-            string textNumbers = Console.ReadLine();
-            Console.WriteLine(Sum(textNumbers));
-            //7
+            string textWithNumbers = Console.ReadLine();
+            Console.WriteLine(SumNumbersOfText(textWithNumbers));
+
+            Console.WriteLine("a)	Найти в тексте все подстроки, которые имеют вид “текст123” (любое кол-во символов за которыми следует любое кл-во чисел).");
             Console.WriteLine("Введите текст");
             string someText = Console.ReadLine();
-            //8
-            FindSubstrings(someText);
 
+            FindSubstrings(someText);
+            Console.WriteLine("b)	Валидировать пароль пользователя по след. правилам: минимальная длина - 6 символов, минимум одна прописная буква, заглавная, цифра.");
             Console.WriteLine("Введите пароль");
             string password = Console.ReadLine();
-
-            //9
             PasswordValidation(password);
+
+            Console.WriteLine("c)	Валидировать ввод на Post Code по след. правилу: 3 цифры, тире, 3 цифры (123-456).");
             Console.WriteLine("Введите пароль на Post Code");
             string postPass = Console.ReadLine();
+            PostCodeValidation(postPass);
 
-            PostCode(postPass);
-            //10
+            Console.WriteLine("d)	Валидировать ввод на телефонный номер формата +380-98-123-45-67. и   e)	Заменить все телефонные номера в тексте (по шаблону выше) на строку  + XXX - XX - XXX - XX - XX");
             Console.WriteLine("Введите номер телефона");
             string number = Console.ReadLine();
-            //11
             PhoneNumber(number);
+            Console.WriteLine("8)	Задан массив строк имен и фамилий:");
             string[] people = { "иван иванов", "светлана иванова-петренко" };
-            ToUpper(people);
-            //12
+            MakeTextToUpper(people);
+
+            Console.WriteLine("9)	Дана строка в формате base64 - 1");
             Console.WriteLine("Введите строку в Base64");
             string base64Text = Console.ReadLine();
             var simpleTextBytes = Encoding.UTF8.GetBytes(base64Text);
             string enText = Convert.ToBase64String(simpleTextBytes);
-            //13
+
+            Console.WriteLine("10)Реализовать алгоритм быстрой сортировки в стиле generics");
             Console.WriteLine(enText);
             double[] arr = { 9, 1.5, 34.4, 234, 1, 56.5 };
-            quicksort<double>(arr, 0, arr.Length - 1);
+            Quicksort<double>(arr, 0, arr.Length - 1);
             Console.WriteLine();
 
         }
 
-        static void ReturnNumber(string text)
+        static void ReturnNumber(string numbersFromString)
         {
-            char[] texter = text.ToCharArray();
+            char[] texter = numbersFromString.ToCharArray();
             for (int i = 0; i < texter.Length; i++)
             {
                 if (char.IsDigit(texter[i]))
@@ -98,17 +90,17 @@ namespace WorkWithSringsAndFormat
             }
         }
 
-        static void DivisionOfNumbers(double firstNum, double secondNum)
+        static void DivisionOfNumbers(double firstNumberDivide, double secondNumberDivide)
         {
-            double result = firstNum / secondNum;
-            string answer = string.Format("{0:F2}", result);
-            Console.WriteLine(answer);
+            double result = firstNumberDivide / secondNumberDivide;
+            string transformednumber = string.Format("{0:F2}", result);
+            Console.WriteLine(transformednumber);
         }
 
-        static void ExponentialForm1(string value)
+        static void ExponentialForm1(string exponentialValue)
         {
             int result = 0;
-            if (!int.TryParse(value, NumberStyles.Any, CultureInfo.InvariantCulture, out result))
+            if (!int.TryParse(exponentialValue, NumberStyles.Any, CultureInfo.InvariantCulture, out result))
             {
                 Console.WriteLine("Неудалось конвертировать");
             }
@@ -122,16 +114,27 @@ namespace WorkWithSringsAndFormat
             Console.WriteLine(DateTime.Now.ToString("G"));
         }
 
-        static int Sum(string textNumbers)
+        static DateTime ParseDateTime(string notParsedDatedate)
         {
-            int result = 0;
-            string[] listNum = textNumbers.Split(',');
+            string[] FirstDate = notParsedDatedate.Split('-', ' ');
+
+            FirstDate[0] = FirstDate[0] + '.';
+            FirstDate[1] = FirstDate[1];
+            FirstDate[2] = FirstDate[2].Remove(0, 0) + '.';
+            notParsedDatedate = (FirstDate[0] + FirstDate[2] + FirstDate[1]).ToString();
+            DateTime date = new DateTime();
+            return DateTime.Parse(notParsedDatedate);
+        }
+        static int SumNumbersOfText(string textWithNumbers)
+        {
+            int SumResult = 0;
+            string[] listNum = textWithNumbers.Split(',');
             foreach (var u in listNum)
             {
 
-                result = result + int.Parse(u.Replace(",", " "));
+                SumResult = SumResult + int.Parse(u.Replace(",", " "));
             }
-            return result;
+            return SumResult;
         }
 
         static void FindSubstrings(string someText)
@@ -166,7 +169,7 @@ namespace WorkWithSringsAndFormat
                 Console.WriteLine("Совпадений не найдено, Пароль не соответствует требованиям");
             }
         }
-        static void PostCode(string postPass)
+        static void PostCodeValidation(string postPass)
         {
             Regex regex = new Regex(@"^[0-9]{3}-[0-9]{3}$");
             MatchCollection matches = regex.Matches(postPass);
@@ -183,13 +186,12 @@ namespace WorkWithSringsAndFormat
             }
         }
 
-
         static void PhoneNumber(string number)
         {
             Regex regex = new Regex(@"^\+380-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}$");
             MatchCollection matches = regex.Matches(number);
-            Regex secondR = new Regex(@"^\+[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}$");
-            MatchCollection secondM = secondR.Matches(number);
+            Regex secondRegex = new Regex(@"^\+[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}$");
+            MatchCollection secondMatches = secondRegex.Matches(number);
             Console.WriteLine("Проверка номера на +380");
             if (matches.Count > 0)
             {
@@ -205,9 +207,9 @@ namespace WorkWithSringsAndFormat
             }
 
             Console.WriteLine("Проверка номера на +XXX");
-            if (secondM.Count > 0)
+            if (secondMatches.Count > 0)
             {
-                foreach (Match match in secondM)
+                foreach (Match match in secondMatches)
                 {
                     Console.WriteLine(match.Value);
                 }
@@ -217,40 +219,39 @@ namespace WorkWithSringsAndFormat
                 Console.WriteLine("Совпадений не найдено, номер не соответствует требованиям");
             }
         }
-    
-        string[] people = { "иван иванов", "светлана иванова-петренко" };
-        static void ToUpper(string[] people)
+
+        static void MakeTextToUpper(string[] people)
         {
-            TextInfo ti = CultureInfo.CurrentCulture.TextInfo;
+            TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
             foreach (var value in people)
             {
-                Console.WriteLine("{0}-->{1}", value, ti.ToTitleCase(value));
+                Console.WriteLine("{0}-->{1}", value, textInfo.ToTitleCase(value));
             }
         }
 
-
-        static int partition<T>(T[] m, int a, int b) where T : IComparable<T>
+        static int Partition<T>(T[] array, int value, int arrayLenght) where T : IComparable<T>
         {
-            int i = a;
-            for (int j = a; j <= b; j++)
+            int i = value;
+            for (int j = value; j <= arrayLenght; j++)
             {
-                if (m[j].CompareTo(m[b]) <= 0)
+                if (array[j].CompareTo(array[arrayLenght]) <= 0)
                 {
-                    T t = m[i];
-                    m[i] = m[j];
-                    m[j] = t;
+                    T t = array[i];
+                    array[i] = array[j];
+                    array[j] = t;
                     i++;
                 }
             }
             return i - 1;
         }
 
-        static void quicksort<T>(T[] m, int a, int b) where T : IComparable<T>
+        static void Quicksort<T>(T[] array, int value, int arrayLenght) where T : IComparable<T>
         {
-            if (a >= b) return;
-            int c = partition(m, a, b);
-            quicksort(m, a, c - 1);
-            quicksort(m, c + 1, b);
+            if (value >= arrayLenght) return;
+            int c = Partition(array, value, arrayLenght);
+            Quicksort(array, value, c - 1);
+            Quicksort(array, value, c - 1);
+            Quicksort(array, c + 1, arrayLenght);
         }
     }
 }
