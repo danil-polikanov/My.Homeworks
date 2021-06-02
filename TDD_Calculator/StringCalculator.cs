@@ -6,22 +6,38 @@ using System.Threading.Tasks;
 
 namespace TDD_Calculator
 {
+
     public class StringCalculator
     {
-
+        private int counter = 0;
+        public event Action<string, int> AddOccured;
+        public StringCalculator()
+        {
+            AddOccured += some;
+        }
+        public int GetCalledCount()
+        {
+            return counter;
+        }
+        public void some(string a,int b)
+        {
+            Console.WriteLine(a, b);
+        }
         public int Add(string numbers)
         {
+            counter++;
+            AddOccured?.Invoke("Использован метод add", counter);
             if (String.IsNullOrEmpty(numbers))
+            {
                 return 0;
+            }
 
             if (numbers.Count() > 1)
             {
-                int[] negative = new int[numbers.Length];
-                var prepair = numbers.Replace(".", ".\n").Replace("//", "!\n").Replace("?", "?\n").Replace(";", ",");
-                String[] lines = prepair.Split(new char[] { '\n', '\r', '!', '?', '.', ',' }, StringSplitOptions.RemoveEmptyEntries);
-                numbers = string.Join(',', lines);
-                numbers.Split(',');
-                int[] numArray = numbers.Replace(",", "").Select(a => a - '0').ToArray();
+                List<int> negative = new List<int>();
+                var prepair = numbers.Replace(".", ".\n").Replace("//", "!\n").Replace("?", "?\n").Replace(";", ",").Replace("%", ",").Replace("\\", ",").Replace("*", ",");
+                String[] lines = prepair.Split(new string[] { "\n", "\r", "!", "?", ".", "," }, StringSplitOptions.RemoveEmptyEntries);
+                int[] numArray = lines.Where(s=>s.Length<4).Select(s => int.Parse(s)).ToArray();
                 for (int i = 0, j = 0; i < numArray.Length; i++)
                 {
                     if (uint.TryParse(numArray[i].ToString(), out uint checkNegative))
@@ -30,25 +46,19 @@ namespace TDD_Calculator
                     }
                     else
                     {
-                        if (checkNegative == 0) negative[j] = numbers[i];
+                        if (checkNegative == 0) negative.Add(numArray[i]);
                         j++;
                     }
-                    if (i == numbers.Length - 1&&j>0)
+                    if (i == numArray.Length - 1 && j > 0)
                     {
-                        throw new Exception($"negatives not allowed: {negative.Where(x => x < 0).Select(x => x)}");
-                        for (int z = 0; z < negative.Length; z++)
-                        {
-                            Console.WriteLine("Негативные числа" + negative[z]);
-                        }
+                        throw new Exception($"negatives not allowed:{string.Join(",", negative.Where(x => x < 0))}");
                     }
-
                 }
-                int num = numbers.Replace(",", "").Select(a => a - '0').ToArray().Sum();
+                int num = numArray.Sum();
                 return num;
 
             }
             return int.Parse(numbers);
         }
-
     }
 }

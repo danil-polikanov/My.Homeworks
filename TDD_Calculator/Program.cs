@@ -6,7 +6,6 @@ namespace TDD_Calculator
     {
         static void Main(string[] args)
         {
-           
         }
     }
 }
