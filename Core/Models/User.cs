@@ -6,15 +6,15 @@ namespace Core.Models
     public class User
     {
         [DataMember]
-        public string firstname;
+        public string Firstname { get; set; }
 
         [DataMember]
-        public string lastname;
+        public string Lastname { get; set; }
 
         [DataMember]
-        public string points;
+        public int Points { get; set; }
 
         [DataMember]
-        public int age;
+        public int Age { get; set; }
     }
 }

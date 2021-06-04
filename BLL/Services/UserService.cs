@@ -1,5 +1,7 @@
-﻿using BLL.Abstraction.Interfaces;
-using DAL.Abstraction.Interfaces;
+﻿using BLL.Abstractions.Interfaces;
+using Core.Models;
+using DAL.Abstractions.Interfaces;
+using System.Collections.Generic;
 
 namespace BLL.Services
 {
@@ -14,7 +16,7 @@ namespace BLL.Services
 
         public List<User> LoadRecords()
         {
-            _repository.LoadRecords();
-        }
+            return _repository.LoadRecords();
+        } 
     }
 }

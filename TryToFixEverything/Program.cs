@@ -3,6 +3,8 @@ using Core.Models;
 using DAL.Services;
 using System;
 using System.Collections.Generic;
+using BLL.Services;
+using DAL.Abstractions.Interfaces;
 
 namespace ConsoleApp8
 {
@@ -22,17 +24,18 @@ namespace ConsoleApp8
     {
         static void Main(string[] args)
         {
-            UserRepository userRepository = new UserRepository();
-            var users = userRepository.LoadRecords();
+            IRepository userRepository = new UserRepository();     
+            IUserService userService = new UserService(userRepository);
+            var users = userService.LoadRecords();
 
             for (int i = 0; i < users.Count; i++)
             {
                 List<User> result = users.FindAll(delegate (User user) {
-                    return user.lastname == users[i].lastname;
+                    return user.Lastname == users[i].Lastname;
                     });
                 foreach (var item in result)
                 {
-                    Console.WriteLine($"Matching Record, got name={item.firstname}, lastname={item.lastname}, age={item.age}");
+                    Console.WriteLine($"Matching Record, got name={item.Firstname}, lastname={item.Lastname}, age={item.Age}");
                 }
             }
             
