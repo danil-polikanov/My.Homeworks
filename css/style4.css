@@ -1,0 +1,10 @@
+.menu{
+    width: 250px;
+}
+.button{
+    color: white;
+    background-color: rgb(71, 67, 67);
+    padding:10px 10px 10px 10px;
+    margin: 5px 5px 5px 5px;
+
+}
