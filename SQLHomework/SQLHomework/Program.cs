@@ -9,13 +9,18 @@ namespace SQLHomework
         static void Main(string[] args)
         {
             Manager manager = new Manager();
-            manager.Sorting_SecondTask();
-            manager.JoinsFirstTask();
-            manager.SixPointSix();
-            manager.SevenPointOne();
-            manager.SevenPointTwo();
-            manager.SevenPointThree();
-
+            var first = manager.GetSortingTable_SecondTask();
+            //manager.ShowTable(first);
+            var second = manager.JoinsFirstTask();
+            //manager.ShowTable(second);
+            var third=manager.SixPointSix();
+            //manager.ShowTable(third);
+            var fourth=manager.SevenPointOne();
+            //manager.ShowTable(fourth);
+            var fifth=manager.SevenPointTwo();
+            //manager.ShowTable(fifth);
+            var six=manager.SevenPointThree();
+            //manager.ShowTable(six);
             Console.Read();
         }
 
