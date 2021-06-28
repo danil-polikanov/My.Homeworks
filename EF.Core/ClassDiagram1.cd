@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EF.Core.Entities.AudioFile">
+    <Position X="4.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIgA=</HashCode>
+      <FileName>Entities\AudioFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EF.Core.Entities.Directory">
+    <Position X="7.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAEAAAAAAAAQAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Entities\Directory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EF.Core.Entities.DirectoryPermission">
+    <Position X="9.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAACAEAAAAAgAAAAAAAAAAAAAAAAIEAA=</HashCode>
+      <FileName>Entities\DirectoryPermission.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EF.Core.Entities.File">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAgMCQAAAAAAAAAAAAAQAAAAQAAAAEEAA=</HashCode>
+      <FileName>Entities\File.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EF.Core.Entities.FilePermission">
+    <Position X="9.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAIIAIA=</HashCode>
+      <FileName>Entities\FilePermission.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EF.Core.Entities.ImageFile">
+    <Position X="9" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\ImageFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EF.Core.Entities.TextFile">
+    <Position X="10.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\TextFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EF.Core.User" Collapsed="true">
+    <Position X="14.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAACAAAAAQAAAAAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Entities\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EF.Core.Entities.VideoFile">
+    <Position X="6.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAACAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\VideoFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
