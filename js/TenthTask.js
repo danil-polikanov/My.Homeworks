@@ -1,12 +1,13 @@
 function Multiplication(arr){
-var objArray=new Array();
-objArray=arr;
-var max=0;
-for(var i=0;i<objArray.length;i++)
+objArray = arr;
+var max = 0;
+var temp;
+for(var i = 0;i<objArray.length;i++)
     {
-    if(max<objArray[i]*objArray[i+1])
+        temp = objArray[i]*objArray[i+1];
+    if(max < temp)
         {
-        max=objArray[i]*objArray[i+1];
+        max = temp;
         }
     }
     return max;

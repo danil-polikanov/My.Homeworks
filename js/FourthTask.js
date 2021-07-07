@@ -1,2 +1,2 @@
-var currentLocation=window.location;
+var currentLocation = window.location;
 console.log(currentLocation);

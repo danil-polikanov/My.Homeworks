@@ -1,8 +1,11 @@
 function removeDuplicates(arr){
-var objArray=new Array();
-objArray=arr;
+
+var objArray = new Array();
+objArray = arr;
+
 var temp=new Set(objArray);
 objArray=[...temp];
+
 return objArray
 }
 
