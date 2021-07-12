@@ -8,7 +8,7 @@ user.display = function(){
 };
 function checkObj(obj){
     for(var key in obj){
-        console.log(key + " : " + user[key]);
+        console.log(key + " : " + obj[key]);
     }
 }
 checkObj(user);
