@@ -1,0 +1,47 @@
+C:\Users\zaruba\Documents\Visual Studio 2017\Projects\School\src\DI\DI.App\obj\Debug\netcoreapp2.0\DI.App.csprojResolveAssemblyReference.cache
+C:\Users\zaruba\Documents\Visual Studio 2017\Projects\School\src\DI\DI.App\obj\Debug\netcoreapp2.0\DI.App.csproj.CoreCompileInputs.cache
+C:\Users\zaruba\Documents\Visual Studio 2017\Projects\School\src\DI\DI.App\obj\Debug\netcoreapp2.0\DI.App.AssemblyInfoInputs.cache
+C:\Users\zaruba\Documents\Visual Studio 2017\Projects\School\src\DI\DI.App\obj\Debug\netcoreapp2.0\DI.App.AssemblyInfo.cs
+C:\Users\zaruba\Documents\Visual Studio 2017\Projects\School\src\DI\DI.App\bin\Debug\netcoreapp2.0\DI.App.deps.json
+C:\Users\zaruba\Documents\Visual Studio 2017\Projects\School\src\DI\DI.App\bin\Debug\netcoreapp2.0\DI.App.runtimeconfig.json
+C:\Users\zaruba\Documents\Visual Studio 2017\Projects\School\src\DI\DI.App\bin\Debug\netcoreapp2.0\DI.App.runtimeconfig.dev.json
+C:\Users\zaruba\Documents\Visual Studio 2017\Projects\School\src\DI\DI.App\bin\Debug\netcoreapp2.0\DI.App.dll
+C:\Users\zaruba\Documents\Visual Studio 2017\Projects\School\src\DI\DI.App\bin\Debug\netcoreapp2.0\DI.App.pdb
+C:\Users\zaruba\Documents\Visual Studio 2017\Projects\School\src\DI\DI.App\obj\Debug\netcoreapp2.0\DI.App.dll
+C:\Users\zaruba\Documents\Visual Studio 2017\Projects\School\src\DI\DI.App\obj\Debug\netcoreapp2.0\DI.App.pdb
+D:\Nyx\DI.App\bin\Debug\netcoreapp2.0\DI.App.deps.json
+D:\Nyx\DI.App\bin\Debug\netcoreapp2.0\DI.App.runtimeconfig.json
+D:\Nyx\DI.App\bin\Debug\netcoreapp2.0\DI.App.runtimeconfig.dev.json
+D:\Nyx\DI.App\bin\Debug\netcoreapp2.0\DI.App.dll
+D:\Nyx\DI.App\bin\Debug\netcoreapp2.0\DI.App.pdb
+D:\Nyx\DI.App\obj\Debug\netcoreapp2.0\DI.App.csprojAssemblyReference.cache
+D:\Nyx\DI.App\obj\Debug\netcoreapp2.0\DI.App.AssemblyInfoInputs.cache
+D:\Nyx\DI.App\obj\Debug\netcoreapp2.0\DI.App.AssemblyInfo.cs
+D:\Nyx\DI.App\obj\Debug\netcoreapp2.0\DI.App.csproj.CoreCompileInputs.cache
+D:\Nyx\DI.App\obj\Debug\netcoreapp2.0\DI.App.dll
+D:\Nyx\DI.App\obj\Debug\netcoreapp2.0\DI.App.pdb
+D:\Nyx\DI.App\obj\Debug\netcoreapp2.0\DI.App.genruntimeconfig.cache
+D:\Nyx\DI.App1 — копия\obj\Debug\netcoreapp2.0\DI.App.csprojAssemblyReference.cache
+D:\Nyx\DI.App1 — копия\obj\Debug\netcoreapp2.0\DI.App.AssemblyInfoInputs.cache
+D:\Nyx\DI.App1 — копия\obj\Debug\netcoreapp2.0\DI.App.AssemblyInfo.cs
+D:\Nyx\DI.App1 — копия\obj\Debug\netcoreapp2.0\DI.App.csproj.CoreCompileInputs.cache
+D:\Nyx\DI.App1 — копия\obj\Debug\netcoreapp2.0\DI.App.dll
+D:\Nyx\DI.App1 — копия\obj\Debug\netcoreapp2.0\DI.App.pdb
+D:\Nyx\DI.App1 — копия\bin\Debug\netcoreapp2.0\DI.App.deps.json
+D:\Nyx\DI.App1 — копия\bin\Debug\netcoreapp2.0\DI.App.runtimeconfig.json
+D:\Nyx\DI.App1 — копия\bin\Debug\netcoreapp2.0\DI.App.runtimeconfig.dev.json
+D:\Nyx\DI.App1 — копия\bin\Debug\netcoreapp2.0\DI.App.dll
+D:\Nyx\DI.App1 — копия\bin\Debug\netcoreapp2.0\DI.App.pdb
+D:\Nyx\DI.App1 — копия\obj\Debug\netcoreapp2.0\DI.App.genruntimeconfig.cache
+D:\Nyx\DI.App.SecondHomework\bin\Debug\netcoreapp2.0\DI.App.deps.json
+D:\Nyx\DI.App.SecondHomework\bin\Debug\netcoreapp2.0\DI.App.runtimeconfig.json
+D:\Nyx\DI.App.SecondHomework\bin\Debug\netcoreapp2.0\DI.App.runtimeconfig.dev.json
+D:\Nyx\DI.App.SecondHomework\bin\Debug\netcoreapp2.0\DI.App.dll
+D:\Nyx\DI.App.SecondHomework\bin\Debug\netcoreapp2.0\DI.App.pdb
+D:\Nyx\DI.App.SecondHomework\obj\Debug\netcoreapp2.0\DI.App.csprojAssemblyReference.cache
+D:\Nyx\DI.App.SecondHomework\obj\Debug\netcoreapp2.0\DI.App.AssemblyInfoInputs.cache
+D:\Nyx\DI.App.SecondHomework\obj\Debug\netcoreapp2.0\DI.App.AssemblyInfo.cs
+D:\Nyx\DI.App.SecondHomework\obj\Debug\netcoreapp2.0\DI.App.csproj.CoreCompileInputs.cache
+D:\Nyx\DI.App.SecondHomework\obj\Debug\netcoreapp2.0\DI.App.dll
+D:\Nyx\DI.App.SecondHomework\obj\Debug\netcoreapp2.0\DI.App.pdb
+D:\Nyx\DI.App.SecondHomework\obj\Debug\netcoreapp2.0\DI.App.genruntimeconfig.cache
