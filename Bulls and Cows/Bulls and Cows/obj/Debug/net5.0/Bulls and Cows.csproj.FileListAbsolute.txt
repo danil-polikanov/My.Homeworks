@@ -1,0 +1,16 @@
+C:\Users\Desktop\source\repos\Bulls and Cows\Bulls and Cows\bin\Debug\net5.0\Bulls and Cows.exe
+C:\Users\Desktop\source\repos\Bulls and Cows\Bulls and Cows\bin\Debug\net5.0\Bulls and Cows.deps.json
+C:\Users\Desktop\source\repos\Bulls and Cows\Bulls and Cows\bin\Debug\net5.0\Bulls and Cows.runtimeconfig.json
+C:\Users\Desktop\source\repos\Bulls and Cows\Bulls and Cows\bin\Debug\net5.0\Bulls and Cows.runtimeconfig.dev.json
+C:\Users\Desktop\source\repos\Bulls and Cows\Bulls and Cows\bin\Debug\net5.0\Bulls and Cows.dll
+C:\Users\Desktop\source\repos\Bulls and Cows\Bulls and Cows\bin\Debug\net5.0\ref\Bulls and Cows.dll
+C:\Users\Desktop\source\repos\Bulls and Cows\Bulls and Cows\bin\Debug\net5.0\Bulls and Cows.pdb
+C:\Users\Desktop\source\repos\Bulls and Cows\Bulls and Cows\obj\Debug\net5.0\Bulls and Cows.csprojAssemblyReference.cache
+C:\Users\Desktop\source\repos\Bulls and Cows\Bulls and Cows\obj\Debug\net5.0\Bulls and Cows.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Desktop\source\repos\Bulls and Cows\Bulls and Cows\obj\Debug\net5.0\Bulls and Cows.AssemblyInfoInputs.cache
+C:\Users\Desktop\source\repos\Bulls and Cows\Bulls and Cows\obj\Debug\net5.0\Bulls and Cows.AssemblyInfo.cs
+C:\Users\Desktop\source\repos\Bulls and Cows\Bulls and Cows\obj\Debug\net5.0\Bulls and Cows.csproj.CoreCompileInputs.cache
+C:\Users\Desktop\source\repos\Bulls and Cows\Bulls and Cows\obj\Debug\net5.0\Bulls and Cows.dll
+C:\Users\Desktop\source\repos\Bulls and Cows\Bulls and Cows\obj\Debug\net5.0\ref\Bulls and Cows.dll
+C:\Users\Desktop\source\repos\Bulls and Cows\Bulls and Cows\obj\Debug\net5.0\Bulls and Cows.pdb
+C:\Users\Desktop\source\repos\Bulls and Cows\Bulls and Cows\obj\Debug\net5.0\Bulls and Cows.genruntimeconfig.cache
