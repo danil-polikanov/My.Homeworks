@@ -11,5 +11,7 @@ if (minute < 10) {
 if (second < 10) {
     second = "0" + second;
 }
-
 document.write("Local time:  "+hour+":"+minute+":"+second+" "+test);
+setInterval(() => {
+    location.reload();
+}, 1000);
