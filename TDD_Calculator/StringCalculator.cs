@@ -13,13 +13,13 @@ namespace TDD_Calculator
         public event Action<string, int> AddOccured;
         public StringCalculator()
         {
-            AddOccured += some;
+            AddOccured += Some;
         }
         public int GetCalledCount()
         {
             return counter;
         }
-        public void some(string a,int b)
+        public void Some(string a,int b)
         {
             Console.WriteLine(a, b);
         }
